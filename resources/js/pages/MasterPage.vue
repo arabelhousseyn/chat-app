@@ -1,5 +1,7 @@
 <template>
     <div class="master-page">
-        <router-view />
+        <v-app>
+            <router-view />
+        </v-app>
     </div>
 </template>
