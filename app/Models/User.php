@@ -49,4 +49,9 @@ class User extends Authenticatable
     {
         return $this->hasOne(UserProfile::class)->withDefault([]);
     }
+
+    public function channels()
+    {
+        return $this->hasMany(UserChannel::class);
+    }
 }
