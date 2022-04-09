@@ -39,7 +39,10 @@ class RegisterController extends Controller
                 'dob' => $request->dob
             ]);
 
-            return response(['message' => 'created !'],201);
+            $token = $user->createToken('chat')->plainTextToken;
+            $data = User::with('profile')->find($user->id);
+            $data['token'] = $token;
+            return response($data,200);
         }
     }
 }
