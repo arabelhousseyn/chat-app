@@ -5441,9 +5441,8 @@ vue__WEBPACK_IMPORTED_MODULE_1__["default"].use((vuetify__WEBPACK_IMPORTED_MODUL
     dark: false,
     themes: {
       light: {
-        primary: '#e85810',
-        secondary: '#304156',
-        third: '#eee',
+        primary: '#f7f7ff',
+        secondary: '#87cbfa',
         white: '#FFF',
         black: '#000'
       }
@@ -34874,7 +34873,14 @@ var render = function () {
   return _c(
     "div",
     { staticClass: "master-page" },
-    [_c("v-app", [_c("router-view")], 1)],
+    [
+      _c(
+        "v-app",
+        { staticStyle: { "background-color": "#f7f7ff" } },
+        [_c("router-view")],
+        1
+      ),
+    ],
     1
   )
 }
