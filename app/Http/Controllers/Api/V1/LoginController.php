@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api\V1;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\LoginRequest;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -23,8 +24,9 @@ class LoginController extends Controller
             {
                 $user = Auth::user();
                 $token = $user->createToken('chat')->plainTextToken;
-                $user['token'] = $token;
-                return response($user,200);
+                $data = User::with('profile')->find(Auth::id());
+                $data['token'] = $token;
+                return response($data,200);
             }else{
                 return response(['message' => __('message.failed')],401);
             }
