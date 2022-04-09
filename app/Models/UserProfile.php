@@ -15,7 +15,6 @@ class UserProfile extends Model
         'fullName',
         'avatar',
         'dob',
-        'is_online'
     ];
 
     public function user()

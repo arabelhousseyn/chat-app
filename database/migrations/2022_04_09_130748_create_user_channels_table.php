@@ -18,7 +18,7 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->string('name');
             $table->string('logo');
-            $table->string('subscriptions_number');
+            $table->string('subscriptions_number')->default(0);
             $table->softDeletes();
             $table->timestamps();
         });
