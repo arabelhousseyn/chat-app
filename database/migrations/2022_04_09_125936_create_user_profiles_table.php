@@ -20,7 +20,6 @@ return new class extends Migration
             $table->string('avatar');
             $table->enum('gender',['M','F']);
             $table->date('dob');
-            $table->boolean('is_online');
             $table->softDeletes();
             $table->timestamps();
         });
