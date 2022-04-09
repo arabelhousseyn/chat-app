@@ -5400,6 +5400,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -34935,50 +34937,67 @@ var render = function () {
           [
             _c("v-card-title", [_vm._v("Login")]),
             _vm._v(" "),
-            _c("v-card-text", [
-              _c(
-                "form",
-                {
-                  on: {
-                    submit: function ($event) {
-                      $event.preventDefault()
-                      return _vm.login.apply(null, arguments)
-                    },
-                  },
-                },
-                [
-                  _c("v-text-field", {
-                    attrs: {
-                      label: "Phone",
-                      placeholder: "Phone",
-                      filled: "",
-                      dense: "",
-                    },
-                  }),
-                  _vm._v(" "),
-                  _c("v-text-field", {
-                    attrs: {
-                      "append-icon": _vm.show1 ? "mdi-eye" : "mdi-eye-off",
-                      label: "Password",
-                      placeholder: "Password",
-                      type: _vm.show1 ? "text" : "password",
-                      filled: "",
-                      dense: "",
-                    },
+            _c(
+              "v-card-text",
+              [
+                _c(
+                  "form",
+                  {
                     on: {
-                      "click:append": function ($event) {
-                        _vm.show1 = !_vm.show1
+                      submit: function ($event) {
+                        $event.preventDefault()
+                        return _vm.login.apply(null, arguments)
                       },
                     },
-                  }),
-                  _vm._v(" "),
-                  _c("v-btn", { attrs: { type: "submit", color: "green" } }, [
-                    _vm._v("Log In"),
-                  ]),
-                ],
-                1
-              ),
-            ]),
+                  },
+                  [
+                    _c("v-text-field", {
+                      attrs: {
+                        label: "Phone",
+                        placeholder: "Phone",
+                        filled: "",
+                        dense: "",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("v-text-field", {
+                      attrs: {
+                        "append-icon": _vm.show1 ? "mdi-eye" : "mdi-eye-off",
+                        label: "Password",
+                        placeholder: "Password",
+                        type: _vm.show1 ? "text" : "password",
+                        filled: "",
+                        dense: "",
+                      },
+                      on: {
+                        "click:append": function ($event) {
+                          _vm.show1 = !_vm.show1
+                        },
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("v-btn", { attrs: { type: "submit", color: "green" } }, [
+                      _vm._v("Log In"),
+                    ]),
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c("v-divider"),
+                _vm._v(" "),
+                _c(
+                  "span",
+                  [
+                    _vm._v("D'ont have account ? "),
+                    _c("router-link", { attrs: { to: "register" } }, [
+                      _vm._v("Register"),
+                    ]),
+                  ],
+                  1
+                ),
+              ],
+              1
+            ),
           ],
           1
         ),

@@ -24,6 +24,8 @@
 
                         <v-btn type="submit" color="green">Log In</v-btn>
                     </form>
+                    <v-divider></v-divider>
+                    <span>D'ont have account ? <router-link to="register">Register</router-link></span>
                 </v-card-text>
             </v-card>
         </div>
