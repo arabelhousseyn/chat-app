@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->string('fullName');
-            $table->string('avatar');
+            $table->string('avatar')->nullable();
             $table->enum('gender',['M','F']);
             $table->date('dob');
             $table->softDeletes();
