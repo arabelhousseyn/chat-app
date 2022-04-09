@@ -6,15 +6,13 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class UserChannel extends Model
+class UserChannelSubscriptions extends Model
 {
     use HasFactory, SoftDeletes;
 
     protected $fillable = [
         'user_id',
-        'name',
-        'logo',
-        'subscriptions_number'
+        'user_channel_id'
     ];
 
     public function user()
@@ -22,9 +20,8 @@ class UserChannel extends Model
         return $this->belongsTo(User::class,'user_id')->withDefault([]);
     }
 
-    public function subscriptions()
+    public function channel()
     {
-        return $this->hasMany(UserChannelSubscriptions::class);
+        return $this->belongsTo(UserChannel::class,'user_channel_id')->withDefault([]);
     }
-
 }
