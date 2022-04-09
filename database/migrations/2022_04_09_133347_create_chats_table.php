@@ -15,6 +15,8 @@ return new class extends Migration
     {
         Schema::create('chats', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('member1');
+            $table->unsignedBigInteger('member2');
             $table->uuid('chat_channel_id');
             $table->softDeletes();
             $table->timestamps();
