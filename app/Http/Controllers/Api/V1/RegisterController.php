@@ -28,7 +28,7 @@ class RegisterController extends Controller
 
             if($request->file('avatar'))
             {
-                $fileName = uniqid() . '.' . $request->file('avatar')->getExtension();
+                $fileName = uniqid() . '.' . $request->file('avatar')->extension();
                 $path = $request->file('avatar')->storeAs('avatars',$fileName);
             }
 
