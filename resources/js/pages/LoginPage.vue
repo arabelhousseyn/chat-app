@@ -2,7 +2,7 @@
     <div class="login-page">
         <div class="wraping d-flex justify-content-center" style="margin-top:200px;">
             <v-card width="500" color="secondary" dark>
-                <v-card-title>Login</v-card-title>
+                <h2 class="text-center mt-5">Login</h2>
 
                 <v-card-text>
                     <form @submit.prevent="login">
